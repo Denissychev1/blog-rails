@@ -3,12 +3,11 @@ class TitlesController < ApplicationController
 
   # GET /titles
   def index
-    @titles = Title.all
-@test1 = Title.includes(:todos)
-query = "select titles.id, titles.text, array_agg(todos.id) as todos from titles left join todos on todos.title_id = titles.id group by titles.id, titles.text"
+    @titles = Title.includes(:todos).http://127.0.0.1:3000(:todos)
+query = "select titles.id, titles.text, array_agg(todos.id) as todos from titles join todos on todos.title_id = titles.id group by titles.id, titles.text"
 @test = ActiveRecord::Base.connection.execute(query)
-    render json: @test
- end
+    render json: @titles
+  end
 
   # GET /titles/1
   def show
