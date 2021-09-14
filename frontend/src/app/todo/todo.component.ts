@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-todo',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<TodoComponent>, private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: any) {
+  }
 
   ngOnInit(): void {
   }

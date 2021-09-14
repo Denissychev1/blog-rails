@@ -7,6 +7,9 @@ import { ProjectComponent } from './project/project.component';
 import { TodoComponent } from './todo/todo.component';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule, MatDialogModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
