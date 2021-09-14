@@ -7,6 +7,10 @@
 # Ignore bundler config.
 /.bundle
 
+#angular
+client/node_modules
+client/dist
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
